@@ -1,2 +1,3 @@
-# Captone_Design
-Smart Water
+# Capstone_Design
+
+"smart water purifier"
