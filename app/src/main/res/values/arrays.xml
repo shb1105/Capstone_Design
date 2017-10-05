@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="medicine">
+        <item>타이레놀</item>
+        <item>항균제</item>
+        <item>감염제</item>
+        <item>소아약</item>
+        <item>심혈제</item>
+        <item>혈압약</item>
+    </string-array>
+</resources>
