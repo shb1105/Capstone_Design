@@ -21,7 +21,8 @@
         <activity android:name=".AddMadicineActivity" />
         <activity android:name=".RegisterMadicineLayout" />
         <activity android:name=".RegisterAlarmLayout" />
-        <activity android:name=".AddPatientActivity"></activity>
+        <activity android:name=".AddPatientActivity" />
+        <activity android:name=".PatientListActivity"></activity>
     </application>
 
 </manifest>
