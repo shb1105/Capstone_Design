@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class AddMadicineActivity extends AppCompatActivity {
+public class AddMedicineActivity extends AppCompatActivity {
 
     //약물정보
     private ArrayAdapter adapter;
