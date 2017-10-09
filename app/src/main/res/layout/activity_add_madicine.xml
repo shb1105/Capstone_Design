@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!--전체 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <!--아이콘 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF">
+
+            <!--아이콘-->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="75dp"
+                android:src="@drawable/ic_patient">
+            </ImageView>
+
+            <!--환자 이름(디비에서 불러온)-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30dp"
+                android:text="조현아"
+                android:textStyle="bold"
+                android:id="@+id/NameResult" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#01579b"
+                android:textSize="20dp"
+                android:text="환자"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!--텍스트 및 editText 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="left"
+                android:text=" 약물 정보 추가"
+                android:textColor="#01579b"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/medicineSpinner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="left"
+                android:text=" 알람 설정"
+                android:textColor="#01579b"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="알람 추가하기"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/alarmAddButton"/>
+
+            <!--버튼 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/backMedicineButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/colorPrimary"
+                    android:text="뒤로"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/nextMedicineButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="등록"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
