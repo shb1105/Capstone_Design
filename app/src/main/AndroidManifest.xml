@@ -18,11 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddMadicineActivity" />
+        <activity android:name=".AddMedicineActivity" />
         <activity android:name=".RegisterMadicineLayout" />
         <activity android:name=".RegisterAlarmLayout" />
         <activity android:name=".AddPatientActivity" />
-        <activity android:name=".PatientListActivity"></activity>
+        <activity android:name=".PatientListActivity" />
+        <activity android:name=".TakeScheduleLayout" />
+        <activity android:name=".AddMedicineInfo"></activity>
     </application>
 
 </manifest>

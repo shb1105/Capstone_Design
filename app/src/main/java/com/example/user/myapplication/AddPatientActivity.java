@@ -1,16 +1,10 @@
 package com.example.user.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import org.w3c.dom.Text;
 
 public class AddPatientActivity extends AppCompatActivity {
 
@@ -26,7 +20,7 @@ public class AddPatientActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(getApplicationContext(),AddMadicineActivity.class);
+                Intent intent=new Intent(getApplicationContext(),AddMedicineActivity.class);
                 startActivity(intent);
 
             }
