@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/add_patient"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_margin">
 
     <!--전체 레이아웃-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_margin="15dp"
+        tools:ignore="UselessParent">
 
         <!--아이콘 레이아웃-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="vertical"
-            android:background="#FFFFFF">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
             <!--아이콘-->
             <ImageView
@@ -25,111 +27,262 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
-                android:src="@drawable/ic_patient">
+                android:src="@drawable/ic_patient"
+                android:contentDescription=""
+                tools:ignore="ContentDescription">
             </ImageView>
         </LinearLayout>
 
         <!--텍스트 및 editText 레이아웃-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="left"
-                android:text=" 환자정보"
-                android:textColor="#01579b"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:text=" 환자정보"-->
+                <!--android:textColor="#01579b"-->
+                <!--android:textSize="18dp"-->
+                <!--android:textStyle="bold"/>-->
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:hint="성 함 :"
-                android:layout_gravity="left"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textStyle="bold"
-                android:background="@color/colorPrimaryDark"
-                android:id="@+id/patientName"/>
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"
-                android:id="@+id/genderGroup">
-
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="여성"
-                    android:id="@+id/genderWoman"
-                    android:layout_weight="1"
-                    android:checked="true"/>
-
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="남성"
-                    android:id="@+id/genderMan"
-                    android:layout_weight="1" />
-
-            </RadioGroup>
-
-            <EditText
-                android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:hint="보호자 번호 :"
-                android:layout_gravity="left"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textStyle="bold"
-                android:background="@color/colorPrimaryDark"
-                android:id="@+id/patientHp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:hint="병실 호수 :"
-                android:layout_gravity="left"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textStyle="bold"
-                android:background="@color/colorPrimaryDark"
-                android:id="@+id/patientHospital"/>
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:hint="성 함 :"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:textColorHint="#ffffff"-->
+                <!--android:textStyle="bold"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:id="@+id/patientName"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="left"
-                android:text=" 정수기 등록"
-                android:textColor="#01579b"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
+                style="@style/CategoryStyle"
+                android:text="@string/patientname" />
 
-            <EditText
-                android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:hint="정수기 제품 키 :"
-                android:layout_gravity="left"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textStyle="bold"
-                android:background="@color/colorPrimaryDark"
-                android:id="@+id/patientSerial"/>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                <EditText
+                    android:id="@+id/patientName"
+                    style="@style/FieldStyle"
+                    tools:ignore="TextFields" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:text=" 성별 :"-->
+            <!--android:textColor="@color/colorSub2"-->
+            <!--android:textSize="18dp"-->
+            <!--android:textStyle="bold"/>-->
+
+        <LinearLayout
+            android:id="@+id/container_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="성별 :"
+                tools:ignore="HardcodedText"/>
+
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/genderGroup"
+                    tools:ignore="UselessParent">
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="여성"
+                        android:id="@+id/genderWoman"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="남성"
+                        android:id="@+id/genderMan"
+                        android:layout_weight="1"
+                        tools:ignore="HardcodedText" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <!--<RadioGroup-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:id="@+id/genderGroup">-->
+
+                <!--<RadioButton-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="여성"-->
+                    <!--android:id="@+id/genderWoman"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:checked="true"/>-->
+
+                <!--<RadioButton-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="남성"-->
+                    <!--android:id="@+id/genderMan"-->
+                    <!--android:layout_weight="1" />-->
+
+            <!--</RadioGroup>-->
+
+            <!--<EditText-->
+                <!--android:inputType="number"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:hint="보호자 번호 :"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textColorHint="#ffffff"-->
+                <!--android:textStyle="bold"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:id="@+id/patientHp"/>-->
+
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:hint="병실 호수 :"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textColorHint="#ffffff"-->
+                <!--android:textStyle="bold"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:id="@+id/patientHospital"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="병실 호수 :"
+                tools:ignore="HardcodedText" />
+
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                <EditText
+                    android:id="@+id/patientHospital"
+                    android:inputType="number"
+                    style="@style/FieldStyle" />
+
+                <TextView
+                    android:text="@string/roomnum"
+                    style="@style/UnitsStyle" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:text=" 정수기 등록"-->
+                <!--android:textColor="@color/colorSub2"-->
+                <!--android:textSize="18dp"-->
+                <!--android:textStyle="bold"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/serialnum" />
+
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                <EditText
+                    android:id="@+id/patientSerial"
+                    style="@style/FieldStyle"
+                    android:inputType="" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <!--<EditText-->
+                <!--android:inputType="number"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:hint="정수기 제품 키 :"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textColorHint="#ffffff"-->
+                <!--android:textStyle="bold"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:id="@+id/patientSerial"/>-->
 
             <!--버튼 레이아웃-->
             <LinearLayout
@@ -140,24 +293,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-                    android:background="@color/colorPrimary"
-                    android:textColor="#ffffff"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="16dp"
                     android:textStyle="bold"
-                    android:text="취소"
-                    android:id="@+id/backPatientButton"/>
+                    android:text="@string/cancel"
+                    android:id="@+id/backPatientButton"
+                    tools:ignore="ButtonStyle,RtlHardcoded,SpUsage" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:textColor="#ffffff"
-                    android:textSize="16dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:text="다음"
-                    android:id="@+id/nextPatientButton"/>
+                    android:text="등록"
+                    android:id="@+id/nextPatientButton"
+                    tools:ignore="ButtonStyle,HardcodedText" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

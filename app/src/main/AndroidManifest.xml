@@ -6,11 +6,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Medicare"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--android:name=".MainActivity"-->
         <activity
-            android:name=".MainActivity"
+
+            android:name="com.example.user.medicare.PatientListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddMedicineActivity" />
-        <activity android:name=".RegisterMadicineLayout" />
-        <activity android:name=".RegisterAlarmLayout" />
-        <activity android:name=".AddPatientActivity" />
-        <activity android:name=".PatientListActivity" />
-        <activity android:name=".TakeScheduleLayout" />
-        <activity android:name=".AddMedicineInfo"></activity>
+        <activity android:name="com.example.user.medicare.AddMedicineActivity" />
+        <activity android:name="com.example.user.medicare.RegisterMedicineLayout" />
+        <activity android:name="com.example.user.medicare.RegisterAlarmLayout" />
+        <activity android:name="com.example.user.medicare.AddPatientActivity"
+            android:label="환자 추가"/>
+        <!--<activity android:name=".PatientListActivity" />-->
+        <activity android:name="com.example.user.medicare.TakeScheduleLayout"
+                  android:label="환자 복용 스케줄"/>
+        <activity android:name="com.example.user.medicare.AddMedicineInfo"
+                  android:label="약 추가"></activity>
     </application>
 
 </manifest>
