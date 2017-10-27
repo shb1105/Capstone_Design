@@ -5,4 +5,27 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="category_overview" />
+
+    <!-- 약물정보  -->
+    <string name="category_medicine_info">약물 정보</string>
+
+    <!-- 약물명  -->
+    <string name="hint_medicine_name">약물 명</string>
+
+    <!-- 약물횟수  -->
+    <string name="hint_medicine_num">횟수</string>
+
+    <!-- 하루에 몇번 -->
+    <string name="category_medicine_num">하루에 몇 번 ?</string>
+
+    <!-- 알람설정 -->
+    <string name="category_alarm">알람설정</string>
+    <string name="_3">3</string>
+    <string name="patientname">성함 :</string>
+    <string name="serialnum">정수기 제품 키 :</string>
+    <string name="cancel">취소</string>
+    <string name="roomnum">호실</string>
+
+
 </resources>
