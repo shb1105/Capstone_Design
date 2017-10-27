@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#29b6f6</color>
-    <color name="colorPrimaryDark">#0288d1</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorPrimary">#29b6f6</color>-->
+    <!--<color name="colorPrimaryDark">#0288d1</color>-->
+    <!--<color name="colorAccent">#F0514B</color>-->
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#e0e0e0</color>
+    <color name="colorAccent">#F0514B</color>
+
+
+    //Dain custom
+    <color name="colorSub1">#1A237E</color>
+    <color name="colorSub2">#bdbdbd</color>
+    <color name="primary_text_default_material_dark">#90a4ae</color>
+    <!--<color name="colorThemeText">#9e9e9e</color>-->
+
+
+
+
+
 </resources>

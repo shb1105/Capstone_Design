@@ -1,9 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.myapplication.AddMedicineInfo">
+    android:orientation="vertical"
+    android:padding="@dimen/layout_margin"
+    tools:context="com.example.user.medicare.TakeScheduleLayout">
 
-</android.support.constraint.ConstraintLayout>
+
+    <!--아이콘-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:layout_margin="15dp"
+
+            android:src="@drawable/ic_patient">
+        </ImageView>
+        <EditText
+            android:id="@+id/patient_name"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            style="@style/FieldStyle" />
+
+
+        <TextView
+            android:text="환자"
+            android:layout_marginTop="20dp"
+            style="@style/UnitsStyle"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_medicine_info" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <!--<EditText-->
+                <!--android:id="@+id/medicine_name"-->
+                <!--android:hint="@string/hint_medicine_name"-->
+                <!--style="@style/FieldStyle"-->
+                <!--android:inputType="textCapWords" />-->
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/medicineSpinner"/>
+
+            <EditText
+                android:id="@+id/medicine_num"
+                android:hint="@string/hint_medicine_num"
+                style="@style/FieldStyle"
+                android:inputType="textCapWords" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_medicine_num" />
+
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="4dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+            <EditText
+                android:id="@+id/take_in_a_day"
+                android:hint="@string/_3"
+                android:inputType="number"
+                style="@style/FieldStyle" />
+
+
+            <TextView
+                android:id="@+id/label_weight_units"
+                android:text="회"
+                style="@style/UnitsStyle"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:layout_width="match_parent"
+                android:text="@string/category_alarm" />
+
+
+            <Button
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="알람 추가하기  +"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:textColorHint="@color/colorPrimary"
+                android:textStyle="bold"
+                android:background="@color/colorSub2"
+                android:id="@+id/alarmAddButton"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <!--버튼 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="취소"
+            android:id="@+id/back_Button"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="등록"
+            android:id="@+id/next_Button"/>
+
+    </LinearLayout>
+</LinearLayout>

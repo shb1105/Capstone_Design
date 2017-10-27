@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.myapplication.RegisterAlarmLayout">
+    tools:context="com.example.user.myapplication.com.example.user.medicare.RegisterAlarmLayout">
 
 
     <!--전체 레이아웃-->
