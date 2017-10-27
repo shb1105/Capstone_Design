@@ -6,10 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.user.medicare.data.MedicareContract.MedicareEntry;
 
-/**
- * Created by Dain_Kang on 2017. 10. 10..
- */
-
 
 
 
