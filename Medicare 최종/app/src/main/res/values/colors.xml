@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#e0e0e0</color>
+    <color name="colorAccent">#F0514B</color>
+
+
+    //Dain custom
+    <color name="colorSub1">#1A237E</color>
+    <color name="colorSub2">#bdbdbd</color>
+    <color name="primary_text_default_material_dark">#90a4ae</color>
+    <!--<color name="colorThemeText">#9e9e9e</color>-->
+
+
+
+
+    <color name="pressed1">#ff5959</color>
+    <color name="pressed2">#524fff</color>
+
+    <color name="focused1">#ffe924</color>
+    <color name="focused2">#8bbee8</color>
+
+    <color name="default1">#f044e7</color>
+    <color name="default2">#3676f8</color>
+    <color name="default3">#2373f8</color>
+    <color name="default4">#73f877</color>
+
+
+
+
+
+</resources>

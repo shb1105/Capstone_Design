@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.application.medicare.medicare.medicine.TakeNightLayout"
+    android:orientation="vertical"
+    android:background="#f1e7e7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#f2dbda"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:background="#f2dbda"
+            android:src="@drawable/dawn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="27dp"
+            android:text="새벽 복용 약물"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/bb_inActiveBottomBarItemColor" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:layout_margin="40dp"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:text="새벽 복용 예정 약물이 없습니다!"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/bb_inActiveBottomBarItemColor" />
+
+
+
+    </LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--약 종류 드롭다운 메뉴-->
+    <string-array name="medicine">
+        <item>타이레놀</item>
+        <item>항균제</item>
+        <item>감염제</item>
+        <item>소아약</item>
+        <item>심혈제</item>
+        <item>혈압약</item>
+    </string-array>
+
+    <!--성별 옵션-->
+    <string-array name="array_gender_options">
+        <item>남성</item>
+        <item>여성</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.medicare.medicine.TakeScheduleLayout"
+    android:weightSum="1">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp">
+
+
+        <EditText
+            android:id="@+id/patient_name"
+            android:layout_weight="1"
+            android:text="김메디"
+            android:textAlignment="center"
+            style="@style/FieldStyle" />
+
+
+        <TextView
+            android:text="환자"
+            style="@style/UnitsStyle"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_accent"
+                android:textColor="@color/colorAccent"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:text="아침"
+                android:drawableBottom="@drawable/ic_pills"
+                android:id="@+id/morning" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@drawable/button_accent"
+                android:textColor="@color/colorAccent"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:text="점심"
+                android:drawableBottom="@drawable/ic_pills"
+                android:id="@+id/lunch"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_accent"
+                android:textColor="@color/colorAccent"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:text="저녁"
+                android:drawableBottom="@drawable/ic_pills"
+                android:id="@+id/dinner" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@drawable/button_accent"
+                android:textColor="@color/colorAccent"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:text="야간"
+                android:drawableBottom="@drawable/ic_pills"
+                android:id="@+id/night"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

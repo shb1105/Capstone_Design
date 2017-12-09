@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Medicare</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="category_overview" />
+
+    <!-- 약물정보  -->
+    <string name="category_medicine_info">약물 정보</string>
+
+    <!-- 약물명  -->
+    <string name="hint_medicine_name">약물 명</string>
+
+
+    <!-- 하루에 몇번 -->
+    <string name="category_medicine_num">하루에 몇 번 ?</string>
+    <string name="category_alarm">알람설정 :</string>
+    <string name="patient_name">성함 :</string>
+    <string name="purifier_key">정수기 제품 키 :</string>
+    <string name="cancel_medicine">취소</string>
+    <string name="room_num">호실</string>
+    <string name="sign_in_info">로그인 정보 입력</string>
+    <string name="cancel_btn">취소</string>
+    <string name="no_list">환자리스트가 존재하지 않습니다...</string>
+    <string name="add_patient">환자를 추가 해 주세요.</string>
+    <string name="add_patientlist">add_patientlist</string>
+    <string name="add_list">환자를 추가 해 주세요</string>
+    <string name="phone_number">phone_number</string>
+    <string name="save">저장하기</string>
+    <string name="cancel_patient">취소</string>
+    <string name="navigation_header">navigation_header</string>
+    <string name="save_patient_list">save_patient_list</string>
+    <string name="cancel_patient_list">cancel_patient_list</string>
+    <string name="settings">설정</string>
+    <string name="change_color">색상변경</string>
+    <string name="set_alarm">알림설정 :</string>
+    <string name="push_alarm">푸쉬 알림</string>
+    <string name="contact_email">이메일</string>
+    <string name="test_purifier_connect">정수기 연결 테스트</string>
+    <string name="activity_new_patient">환자 추가</string>
+    <string name="activity_edit_patient">환자 정보 수정</string>
+    <string name="gender_male">남성</string>
+    <string name="gender_female">여성</string>
+    <string name="insert_patient_failed">환자추가실패</string>
+    <string name="insert_patient_successful">환자추가성공</string>
+    <string name="update_patient_failed">환자업데이트실패</string>
+    <string name="update_patient_successful">환자업데이트성공</string>
+    <string name="keep_editing">취소</string>
+    <string name="discard">나가기</string>
+    <string name="unsaved_changes_dialog_msg">환자 수정을 중단하시겠습니까 ?</string>
+    <string name="delete_dialog_msg">해당환자 목록을 제거 하시겠습니까 ?</string>
+    <string name="delete">제거</string>
+    <string name="cancel">취소하기</string>
+    <string name="delete_patient_failed">환자제거실패</string>
+    <string name="delete_patient_successful">환자제거성공</string>
+    <string name="delete_patient_list">해당환자목록제거</string>
+    <string name="purifier_key_title">정수기 제품 키:</string>
+    <string name="unknown_room_num">미확인병실번호</string>
+    <string name="delete_all_entries">모든 환자리스트 제거</string>
+    <string name="timer_by_hour">아침 / 점심 / 저녁 / 야간</string>
+    <string name="add_alarm1">+ 알람 추가하기 1 </string>
+    <string name="add_alarm2">+ 알람 추가하기 2 </string>
+    <string name="add_alarm3">+ 알람 추가하기 3 </string>
+    <string name="add_alarm4">+ 알람 추가하기 4 </string>
+    <string name="take_a_day">횟수</string>
+    <string name="take_start">복용시작일</string>
+    <string name="take_end">복용 완료일</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">회원가입</string>
+
+
+    <item name="radio_gender" type="id">성별라디오버튼</item>
+    <string name="title_activity_bomttom_tab">BomttomTabActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment1">hello blank fragment1</string>
+    <string name="hello_blank_fragment2">hello_blank_fragment2</string>
+</resources>

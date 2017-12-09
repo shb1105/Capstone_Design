@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/layout_margin"
+        android:scrollbars="vertical"
+        tools:context=".medicine.AddMedicineActivity">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/ic_patient">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/patient_name"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                style="@style/FieldStyle"/>
+            <!--android:text="강다인"-->
+
+
+
+            <TextView
+                android:text="환자"
+                android:layout_marginTop="20dp"
+                style="@style/UnitsStyle"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+        //약물정보
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_medicine_info" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/medicine_spinner"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        //하루에 몇번
+        <LinearLayout
+            android:id="@+id/take_a_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_medicine_num" />
+
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                <EditText
+                    android:id="@+id/take_in_a_day"
+                    android:hint="@string/take_a_day"
+                    android:inputType="number"
+                    style="@style/FieldStyle" />
+
+
+                <TextView
+                    android:id="@+id/label_weight_units"
+                    android:text="회"
+                    style="@style/UnitsStyle"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        //알람설정
+        <LinearLayout
+            android:id="@+id/container_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:text="@string/category_alarm" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:text="@string/timer_by_hour" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/add_alarm1"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="13dp"
+                    android:textColor="@color/colorSub2"
+                    android:textStyle="bold"
+                    android:onClick="setTime"
+                    android:background="@drawable/button_gray"
+                    android:id="@+id/alarmAddButton_1" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/add_alarm2"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="13dp"
+                    android:textColor="@color/colorSub2"
+                    android:textStyle="bold"
+                    android:onClick="setTime"
+                    android:background="@drawable/button_gray"
+                    android:id="@+id/alarmAddButton_2"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/add_alarm3"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="13dp"
+                    android:textColor="@color/colorSub2"
+                    android:textStyle="bold"
+                    android:onClick="setTime"
+                    android:background="@drawable/button_gray"
+                    android:id="@+id/alarmAddButton_3"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/add_alarm4"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="13dp"
+                    android:textColor="@color/colorSub2"
+                    android:textStyle="bold"
+                    android:onClick="setTime"
+                    android:background="@drawable/button_gray"
+                    android:id="@+id/alarmAddButton_4"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        //복용 시작일
+        <LinearLayout
+            android:id="@+id/container_date_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/take_start" />
+
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                <EditText
+                    android:id="@+id/take_start"
+                    android:hint="ex) 20170101"
+                    android:inputType="number"
+                    style="@style/FieldStyle" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        //복용 완료일
+        <LinearLayout
+            android:id="@+id/container_date_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/take_end"/>
+
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="4dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                <EditText
+                    android:id="@+id/take_end"
+                    android:hint="ex) 20171212"
+                    android:inputType="number"
+                    style="@style/FieldStyle" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

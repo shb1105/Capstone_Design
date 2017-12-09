@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tabs>
+
+        <tab
+            id="@+id/tab_patient_info"
+            icon="@drawable/ic_patient_info"
+            title="환자 정보"
+            barColorWhenSelected="@color/colorSub2"/>
+
+        <tab
+            id="@+id/tab_medicine_info"
+            icon="@drawable/ic_medicine_info"
+            title="약 정보"
+            barColorWhenSelected="@color/colorSub2"/>
+
+    </tabs>
+</PreferenceScreen>

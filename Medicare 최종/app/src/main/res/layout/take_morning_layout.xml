@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.application.medicare.medicare.medicine.TakeMorningLayout"
+    android:orientation="vertical"
+    android:background="#f1e7e7">
+
+    /* 약 이름 시간*/
+    /* 시작일 종료일  복용여부*/
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#f2dbda"
+        android:orientation="vertical">
+
+       <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:background="#f2dbda"
+            android:src="@drawable/morning" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="23dp"
+            android:text="아침 복용 약물"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/bb_inActiveBottomBarItemColor" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/bb_inActiveBottomBarItemColor"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFFFFF"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif"
+            android:text="오전 8 : 35"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textSize="20dp"
+            />
+
+        <View
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/bb_inActiveBottomBarItemColor"/>
+
+
+        <TextView
+            android:drawableStart="@drawable/ic_medicine"
+            android:drawableLeft="@drawable/ic_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:layout_margin="35dp"
+            android:textSize="25dp"
+            android:text="              타이레놀"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/bb_inActiveBottomBarItemColor" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/bb_inActiveBottomBarItemColor"/>
+
+
+
+        <TextView
+            android:drawableStart="@drawable/ic_done"
+            android:drawableLeft="@drawable/ic_done"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorAccent"
+            android:text="  복용하세요"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textSize="17dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

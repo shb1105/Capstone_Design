@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+package="com.application.medicare.medicare">
+
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+<application
+android:allowBackup="true"
+android:icon="@mipmap/ic_launcher"
+android:label="Medicare"
+android:roundIcon="@mipmap/ic_launcher"
+android:supportsRtl="true"
+android:theme="@style/AppTheme"
+tools:ignore="HardcodedDebugMode">
+/* 메인 */
+<activity android:name=".patient.PatientListActivity">
+
+<!-- android:theme="@style/AppTheme.NoActionBar"> -->
+<intent-filter>
+<action android:name="android.intent.action.MAIN" />
+
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+</activity>
+/* 알람 등록 */
+<activity
+android:name=".medicine.RegisterAlarmLayout"
+android:label="알람 설정" />
+/* 환자 추가 */
+<activity
+android:name=".patient.AddPatientActivity"
+android:alwaysRetainTaskState="true"
+android:parentActivityName=".patient.PatientListActivity">
+<meta-data
+android:name="android.support.PARENT_ACTIVITY"
+android:value=".patient.PatientListActivity" />
+</activity>
+<!-- <activity android:name=".PatientListActivity" /> -->
+/* 환자 복용 스케줄 */
+<activity android:name=".medicine.TakeScheduleLayout"
+android:label="약 복용 스케줄"/>
+/* 약 추가 */
+<activity
+android:name=".medicine.AddMedicineActivity"
+android:label="약 추가"
+android:parentActivityName=".patient.AddPatientActivity">
+<meta-data
+android:name="android.support.PARENT_ACTIVITY"
+android:value=".patient.PatientListActivity" />
+</activity>
+<activity android:name=".MainActivity">
+
+</activity>
+/* 환자 Provider */
+<provider
+android:name=".data.PatientProvider"
+android:authorities="com.application.medicare.medicare"
+android:exported="false" />
+/* 약 Provider */
+<provider
+android:name=".data.MedicineProvider"
+android:authorities="com.application.medicare.medicare"
+android:exported="false" />
+/* 스케줄 Provider */
+<provider
+android:name=".data.ScheduleProvider"
+android:authorities="com.application.medicare.medicare"
+android:exported="false" />
+/* 상세 스케줄 Provider */
+<provider
+android:name=".data.DetailScheduleProvider"
+android:authorities="com.application.medicare.medicare"
+android:exported="false" />
+/*아침 스케줄*/
+<activity android:name=".medicine.TakeMorningLayout">
+<meta-data
+android:name="android.support.PARENT_ACTIVITY"
+android:value=".medicine.TakeScheduleLayout" />
+</activity>
+
+/*점심 스케줄*/
+<activity android:name=".medicine.TakeLunchLayout">
+<meta-data
+android:name="android.support.PARENT_ACTIVITY"
+android:value=".medicine.TakeScheduleLayout" />
+</activity>
+
+/*저녁 스케줄*/
+<activity android:name=".medicine.TakeDinnerLayout" >
+<meta-data
+android:name="android.support.PARENT_ACTIVITY"
+android:value=".medicine.TakeScheduleLayout" />
+</activity>
+
+/*새벽 스케줄*/
+<activity android:name=".medicine.TakeNightLayout">
+<meta-data
+android:name="android.support.PARENT_ACTIVITY"
+android:value=".medicine.TakeScheduleLayout" />
+</activity>
+
+
+
+
+
+
+<activity android:name=".patient.ModifyTabActivity"></activity>
+</application>
+
+</manifest>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--package="com.application.medicare.medicare">-->
+
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+
+    <!--<application-->
+        <!--android:allowBackup="true"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:label="Medicare"-->
+        <!--android:roundIcon="@mipmap/ic_launcher"-->
+        <!--android:supportsRtl="true"-->
+        <!--android:theme="@style/AppTheme"-->
+        <!--tools:ignore="HardcodedDebugMode">-->
+        <!--/* 메인 */-->
+        <!--<activity android:name=".loadingclass">-->
+
+            <!--&lt;!&ndash; android:theme="@style/AppTheme.NoActionBar"> &ndash;&gt;a-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--/*로그인*/-->
+        <!--<activity android:name=".LoginActivity"/>-->
+        <!--/*회원가입*/-->
+        <!--<activity android:name=".JoinActivity" />-->
+        <!--/* 알람 등록 */-->
+        <!--<activity-->
+            <!--android:name=".medicine.RegisterAlarmLayout"-->
+            <!--android:label="알람 설정" />-->
+        <!--/* 환자 추가 */-->
+        <!--<activity-->
+            <!--android:name=".patient.AddPatientActivity"-->
+            <!--android:parentActivityName=".patient.PatientListActivity">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".patient.PatientListActivity" />-->
+        <!--</activity>-->
+        <!--&lt;!&ndash; <activity android:name=".PatientListActivity" /> &ndash;&gt;-->
+        <!--/* 환자 복용 스케줄 */-->
+        <!--<activity android:name=".medicine.TakeScheduleLayout" />-->
+        <!--/* 약 추가 */-->
+        <!--<activity-->
+            <!--android:name=".medicine.AddMedicineActivity"-->
+            <!--android:label="약 추가"-->
+            <!--android:parentActivityName=".patient.AddPatientActivity">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".patient.PatientListActivity" />-->
+        <!--</activity>-->
+        <!--<activity android:name=".patiButtomTabActivityvity" />-->
+        <!--<activity android:name=".patient.PatientListActivity"/>-->
+        <!--<activity android:name=".MainActivity" />-->
+        <!--/* 환자 Provider */-->
+        <!--<provider-->
+            <!--android:name=".data.PatientProvider"-->
+            <!--android:authorities="com.application.medicare.medicare"-->
+            <!--android:exported="false" />-->
+        <!--/* 약 Provider */-->
+        <!--<provider-->
+            <!--android:name=".data.MedicineProvider"-->
+            <!--android:authorities="com.application.medicare.medicare"-->
+            <!--android:exported="false" />-->
+        <!--/* 스케줄 Provider */-->
+        <!--<provider-->
+            <!--android:name=".data.ScheduleProvider"-->
+            <!--android:authorities="com.application.medicare.medicare"-->
+            <!--android:exported="false" />-->
+        <!--/* 상세 스케줄 Provider */-->
+        <!--<provider-->
+            <!--android:name=".data.DetailScheduleProvider"-->
+            <!--android:authorities="com.application.medicare.medicare"-->
+            <!--android:exported="false" />-->
+
+            <!--<activity android:name=".medicine.TakeMorningLayout" >-->
+            <!--<meta-data-->
+            <!--android:name="android.support.PARENT_ACTIVITY"-->
+            <!--android:value=".medicine.TakeScheduleLayout" />-->
+            <!--</activity>-->
+
+            <!--<activity android:name=".medicine.TakeLunchLayout" >-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".medicine.TakeScheduleLayout" />-->
+            <!--</activity>-->
+            <!--<activity android:name=".medicine.TakeDinnerLayout" >-->
+            <!--<meta-data-->
+            <!--android:name="android.support.PARENT_ACTIVITY"-->
+            <!--android:value=".medicine.TakeScheduleLayout" />-->
+            <!--</activity>-->
+            <!--<activity android:name=".medicine.TakeNightLayout">-->
+            <!--<meta-data-->
+            <!--android:name="android.support.PARENT_ACTIVITY"-->
+            <!--android:value=".medicine.TakeScheduleLayout" />-->
+            <!--</activity>-->
+
+        <!--<activity android:name=".patient.ModifyTabActivity"></activity>-->
+
+
+        <!--/*fms (메시지 푸쉬) service */-->
+        <!--<service-->
+            <!--android:name=".MyFirebaseMessagingService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <!--<service-->
+            <!--android:name=".MyFirebaseInstanceIDService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+    <!--</application>-->
+
+<!--</manifest>-->
+
+
+
+
