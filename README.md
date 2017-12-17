@@ -5,4 +5,4 @@ Smart Water Purifier & Medicare application iot system by 건강해조
 : 하루에 3번, 환자에게 가장 자주 필요한 노동이지만 거동 불편한 환자를 위해
 간호사가 환자 스스로 약 복용이  가능하도록 만든 스마트 정수기 환자 관리 시스템.
 
-![ex_screenshot](.Capstone_Design/Medicare 최종/app/src/main/res/layout/medicare_info.jpg)
+![medicare_info](.Capstone_Design/Medicare 최종/app/src/main/res/layout/medicare_info.jpg)
